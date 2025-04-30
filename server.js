@@ -65,3 +65,8 @@ app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
 
+const cors = require('cors');
+app.use(cors());
+app.use(cors({
+  origin: 'https://omchauhan18.github.io/portfolio-frontend/public/',  // Replace with your frontend URL
+}));
