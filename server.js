@@ -60,7 +60,8 @@ app.post("/hire", async (req, res) => {
     res.status(500).json({ error: "Failed to send hire request." });
   }
 });
-
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+const port = process.env.PORT || 3000; // Use dynamic port if available, otherwise fallback to 3000
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
 });
+
